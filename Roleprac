@@ -1,0 +1,22 @@
+//master.yml
+---
+- name: Apply roles to all hosts
+  hosts: all
+  become: true
+  roles:
+    - git
+    - nginx
+
+//git-main.yml
+---
+- name: Install git on node
+  apt:
+    name: git
+    state: present
+
+//nginx-main.yml
+---
+- name: Install nginx on node
+  apt:
+    name: nginx
+    state: present
