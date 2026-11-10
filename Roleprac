@@ -1,3 +1,4 @@
+
 //master.yml
 ---
 - name: Apply roles to all hosts
@@ -20,6 +21,17 @@
   apt:
     name: nginx
     state: present
+
+//Role Structure
+/etc/ansible/packageinstall
+├── master.yml
+└── roles
+    ├── git
+    │   └── tasks
+    │       └── main.yml
+    └── nginx
+        └── tasks
+            └── main.yml
 
 
 
